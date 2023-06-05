@@ -1,18 +1,16 @@
-'''Напишите функцию принимающую на вход только ключевые
-параметры и возвращающую словарь, где ключ — значение
-переданного аргумента, а значение — имя аргумента. Если
-ключ не хешируем, используйте его строковое представление.'''
-
-def hashable_dicts(**kwargs):
-    pets = dict()
-    for k, v in kwargs.items():
-        if isinstance(v, (list, dict, set, bytearray)):
-            v = str(v)
-        pets[v] = k
-    return pets
+'''Напишите функцию принимающую на вход только ключевые параметры и возвращающую 
+словарь, где ключ — значение переданного аргумента, а значение — имя аргумента. 
+Если ключ не хешируем, используйте его строковое представление.'''
 
 
-print(hashable_dicts(dog='Jack', 
-                     cat={'Leopold': 2, 'Murka': 3}, 
-                     turtle=['bill', 'jack', 'anatoliy'],
-                     hamster={'edward', 'homa'}))
+def academic_performance(**kwargs) -> dict:
+    academic_dict = {}
+    for key, value in kwargs.items():
+        if isinstance(value, (list, dict, set, bytearray)): # проверка изменяемости данных
+        # if hash(value): # проверка на хешируемость (потребуется обработка ошибки)
+            value = str(value)
+        academic_dict[value] = key
+    return academic_dict
+
+
+print(academic_performance(chemical=5, phisics=4, mathematics=3))

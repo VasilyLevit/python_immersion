@@ -2,7 +2,9 @@
 Вернуть сумму чисел между между переданными индексами.
 Если индекс выходит за пределы списка, сумма считается до конца и/или начала списка.'''
 
+
 def sum_numbers(numbers: list[int], index_min: int, index_max: int) -> int:
+    '''Возвращает сумму чисел между указанными индексами'''
     if index_min > index_max:
         sum_numbers(numbers, index_max, index_min)
     if index_min < 0:

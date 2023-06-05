@@ -1,15 +1,20 @@
 '''Напишите функцию для транспонирования матрицы'''
 
-def transparent_matrix(*a_list: list[[int]]) -> list[()] | str:
-    is_transparent = True
-    col = len(a_list[0])
-    for a in list(a_list):
-        if len(a) != col:
-            is_transparent = False
-    if is_transparent:
-        return list(zip(*a_list))
+
+def matrix_transparent(*matrix: tuple[int]) -> tuple[int] | str:
+    '''Транспонирование матрицы
+    transparentable - возможность транспонирования (квадратность матрицы)'''
+    print(*matrix, sep='\n')
+    transparentable = True
+    for raw in matrix:
+        if len(raw) != len(matrix):
+            transparentable = False
+      
+    if transparentable:       
+        return zip(*matrix)
     else:
         return 'Матрицу нельзя транспорировать'
 
 
-print(transparent_matrix([1, 3, 5], [2, 4, 6]))
+print("Транспонированная матрица: ",
+      *matrix_transparent((1, 2, 3), (4, 5, 6), (7, 8, 9)), sep='\n')
