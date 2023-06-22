@@ -52,7 +52,8 @@ def feel_names(quantity_names: int, file_name: str) -> None:
 ✔ При достижении конца более короткого файла, возвращайтесь в его начало.'''
 
 def _read_or_begin(fd) -> str:
-    '''При достижении конца более короткого файла, возвращает указатель в его начало'''
+    '''При достижении конца более короткого файла, возвращает указатель в его начало
+    :fd: файловый дескриптор'''
     line = fd.readline()
     if not line:
         fd.seek(0)
@@ -67,13 +68,13 @@ def join_2files():
         lines_file1 = sum(1 for _ in f_n) # определяем количество строк в файле
         lines_file2 = sum(1 for _ in f_w)
         
-        for _ in range(max(lines_file1, lines_file2)): # 
+        for _ in range(max(lines_file1, lines_file2)): # проход по максимальному количеству строк
             num = _read_or_begin(f_n)
             word = _read_or_begin(f_w)
             num_a, num_b = num.split('|')
             mult = int(num_a) * float(num_b)
             if mult < 0:
-                f_r.write(f'{word.lower()} {abs(mult)}')
+                f_r.write(f'{word.lower()} {abs(mult)}\n')
             elif mult > 0:
                 f_r.write(f'{word.upper()} {round(mult)}\n')
 
