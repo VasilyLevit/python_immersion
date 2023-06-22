@@ -12,32 +12,31 @@ import csv
 import pickle
 
 
-def get_dirs_json(curr_dir: str) -> dict[int:{str: str | int}]:
-    sum_dirs = 0
-    dict_dir = {}
-    types = ['file', 'folder']
-    for i, file in enumerate(os.listdir(curr_dir), 1):
-        path = os.path.join(curr_dir, file)
-        item_dict = {'name': path.split('\\')[-1], 'parent': path.split('\\')[-2], 'type': None, 'size': None}
-        dict_dir[i] = item_dict
-        if os.path.isfile(path):
-            item_dict['size'] = f'{os.path.getsize(path)} b'
-            item_dict['type'] = types[0]
-        elif os.path.isdir(path):
-            sum_dirs += os.path.getsize(path)
-            item_dict['size'] = f'{sum_dirs} b'
-            item_dict['type'] = types[1]
-            dict_dir.update(get_dirs_json(path))
-    return dict_dir
+def get_dirs(up_dir: str) -> list(dict[str: str | int ]):
+    '''Обходит вложенные директории
+    :current_dir: начальная директория'''
+    result = []     
+    for dir_path, dir_name, file_name in os.walk(up_dir):  # обход рекурсивно вложенных дирректорий     
+        for name in dir_name:
+            result.append({'name': name, 
+                         'parent': dir_path.split('/')[-1], 
+                         'type': 'folder', 
+                         'size': os.path.getsize(os.path.join(dir_path, name))})        
+        for name in file_name:
+            result.append({'name': name, 
+                         'parent': dir_path.split('/')[-1], 
+                         'type': 'file', 
+                         'size': os.path.getsize(os.path.join(dir_path, name))})               
+    return result
 
 
-def write_json(file, data: dict[int:{str: str | int}]) -> None:
+def write_json(file, data: list(dict[str: str | int ])) -> None:
     with open(file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def write_csv(file, data: dict[int:{str: str | int}]) -> None:
-    with open('dir_info_csv.csv', 'w', encoding='utf-8') as f:
+    with open(file, 'w', encoding='utf-8') as f:
         writer = csv.writer(f, dialect='excel', quoting=csv.QUOTE_NONNUMERIC, delimiter=',')
         writer.writerow(('id', 'name', 'parent', 'type', 'size'))
         for k, v in data.items():
@@ -48,3 +47,10 @@ def write_pickle(file, data: dict[int:{str: str | int}]) -> None:
     with open(file, 'wb') as f:
         pickle.dump(data, f)
 
+
+if __name__ == '__main__':
+
+    dict_json = get_dirs('/Users/Addison/OneDrive/Geekbrains/Python')
+    write_json('dir_info.json', dict_json)    
+    # write_csv('dir_info.csv', dict_json)
+    # write_pickle('dir_info.pickle', dict_json)
