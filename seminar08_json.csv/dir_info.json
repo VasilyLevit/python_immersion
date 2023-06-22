@@ -1,0 +1,320 @@
+[
+    {
+        "name": "Погружение в Python",
+        "parent": "Python",
+        "type": "folder",
+        "size": 608
+    },
+    {
+        "name": "Python знакомство",
+        "parent": "Python",
+        "type": "folder",
+        "size": 512
+    },
+    {
+        "name": ".DS_Store",
+        "parent": "Python",
+        "type": "file",
+        "size": 10244
+    },
+    {
+        "name": "Установка",
+        "parent": "Погружение в Python",
+        "type": "folder",
+        "size": 160
+    },
+    {
+        "name": "Лекция 2. Погружение в Python. Простые типы данных.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 524098
+    },
+    {
+        "name": "Лекция 3. Погружение в Python. Коллекции.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 568992
+    },
+    {
+        "name": ".DS_Store",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 8196
+    },
+    {
+        "name": "Лекция 5. Погружение в Python. Итераторы и генераторы.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 450846
+    },
+    {
+        "name": "Лекция 7. Погружение в Python. Файлы и файловая система.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 472982
+    },
+    {
+        "name": "Урок 4.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1674158126
+    },
+    {
+        "name": "Урок 5.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1436412126
+    },
+    {
+        "name": "Урок 7.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1984668965
+    },
+    {
+        "name": "Урок 6.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1885212660
+    },
+    {
+        "name": "Урок 2.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1501708460
+    },
+    {
+        "name": "Урок 3.mp4",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 1285493075
+    },
+    {
+        "name": "Лекция 6. Погружение в Python. Модули.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 487182
+    },
+    {
+        "name": "Лекция 8. Погружение в Python. Сериализация.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 437252
+    },
+    {
+        "name": "Лекция 4. Погружение в Python. Функции.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 530167
+    },
+    {
+        "name": "Лекция 9. Погружение в Python. Декораторы.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 397802
+    },
+    {
+        "name": "Лекция 1. Погружение в Python. Основы Python.pdf",
+        "parent": "Погружение в Python",
+        "type": "file",
+        "size": 793845
+    },
+    {
+        "name": "Linux .docx",
+        "parent": "Установка",
+        "type": "file",
+        "size": 612404
+    },
+    {
+        "name": "MacOS.docx",
+        "parent": "Установка",
+        "type": "file",
+        "size": 316212
+    },
+    {
+        "name": "Windows.docx",
+        "parent": "Установка",
+        "type": "file",
+        "size": 1031446
+    },
+    {
+        "name": "Лекция4",
+        "parent": "Python знакомство",
+        "type": "folder",
+        "size": 192
+    },
+    {
+        "name": "Приложение к семинару6.txt",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 501
+    },
+    {
+        "name": "Приложение к семинару2.txt",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 642
+    },
+    {
+        "name": ".DS_Store",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 6148
+    },
+    {
+        "name": "Приложение к семинару3.txt",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 2289
+    },
+    {
+        "name": "Конспект2.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 8411062
+    },
+    {
+        "name": "Конспект1.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 1858224
+    },
+    {
+        "name": "Лекция 1. Знакомство с языком программирования  Python.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 1739360
+    },
+    {
+        "name": "Лекция 2. Данные, функции и модули в python.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 1103223
+    },
+    {
+        "name": "Лекция 3. Ускоренная  обработка данных_ lambda, filter, map,  zip, enumerate, List Comprehension .pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 1249181
+    },
+    {
+        "name": "Приложение к семинару5 дз.txt",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 332
+    },
+    {
+        "name": "Лекция 5_ Возможна ли жизнь без PIP.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 803950
+    },
+    {
+        "name": "Книги для изучения.txt",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 495
+    },
+    {
+        "name": "Лекция 1. Погружение в Python. Основы Python.pdf",
+        "parent": "Python знакомство",
+        "type": "file",
+        "size": 793845
+    },
+    {
+        "name": "join_job",
+        "parent": "Лекция4",
+        "type": "folder",
+        "size": 288
+    },
+    {
+        "name": "calc",
+        "parent": "Лекция4",
+        "type": "folder",
+        "size": 64
+    },
+    {
+        "name": ".DS_Store",
+        "parent": "Лекция4",
+        "type": "file",
+        "size": 6148
+    },
+    {
+        "name": "Лекция 4_ Python - от простого к практике.pdf",
+        "parent": "Лекция4",
+        "type": "file",
+        "size": 890556
+    },
+    {
+        "name": "__pycache__",
+        "parent": "join_job",
+        "type": "folder",
+        "size": 224
+    },
+    {
+        "name": "user_interface.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 446
+    },
+    {
+        "name": "xml_generator.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 1081
+    },
+    {
+        "name": "logger.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 642
+    },
+    {
+        "name": "html_creater.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 1184
+    },
+    {
+        "name": "data_provider.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 504
+    },
+    {
+        "name": "main.py",
+        "parent": "join_job",
+        "type": "file",
+        "size": 181
+    },
+    {
+        "name": "html_creater.cpython-39.pyc",
+        "parent": "__pycache__",
+        "type": "file",
+        "size": 1172
+    },
+    {
+        "name": "xml_generator.cpython-39.pyc",
+        "parent": "__pycache__",
+        "type": "file",
+        "size": 1184
+    },
+    {
+        "name": "logger.cpython-39.pyc",
+        "parent": "__pycache__",
+        "type": "file",
+        "size": 946
+    },
+    {
+        "name": "user_interface.cpython-39.pyc",
+        "parent": "__pycache__",
+        "type": "file",
+        "size": 764
+    },
+    {
+        "name": "data_provider.cpython-39.pyc",
+        "parent": "__pycache__",
+        "type": "file",
+        "size": 822
+    }
+]
