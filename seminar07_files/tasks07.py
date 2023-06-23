@@ -17,7 +17,7 @@ def feel_numbers(count: int, file_name: str) -> None:
             f.write(f'{randint(MIN_NUM, MAX_NUM)} | {uniform(MIN_NUM, MAX_NUM)}\n')
 
 
-feel_numbers(3, 'task01.txt')
+# feel_numbers(3, 'task01.txt')
 
 '''Задание №2 
 ✔ Напишите функцию, которая генерирует псевдоимена.
@@ -25,19 +25,20 @@ feel_numbers(3, 'task01.txt')
   обязательно должны быть гласные.
 ✔ Полученные имена сохраните в файл.'''
 
-VOWES = 'aeiouy'
-CONSTANATS = 'bcdfghjklmnpqrstvwxz'
+VOWELS = 'aeiouy'
+CONSONANTS = 'bcdfghjklmnpqrstvwxz'
 
-def feel_names(count: int, file_name: str) -> None:
-    '''Генерирует псевдоимена и сохраняет в файл'''    
-    with open(file_name, 'a', encoding='utf-8') as f:
-        for _ in range(count):
-            rad_string = "".join(choice(VOWES) if i % 3 == 0 else choice(CONSTANATS) 
+def feel_names(quantity_names: int, file_name: str) -> None:
+    '''Генерирует псевдоимена и сохраняет в файл
+    :quantity names: количество имён'''    
+    with open(file_name, 'a', encoding='utf-8') as f: #открываем файл в режиме добавления 'a'
+        for _ in range(quantity_names):
+            name = ''.join(choice(VOWELS) if i % 3 == 0 else choice(CONSONANTS) 
                                                       for i in range(randint(4, 7)))
-            f.write(f'{rad_string.capitalize()}\n')
+            f.write(f'{name.capitalize()}\n')
 
 
-feel_names(10, 'task02.txt')
+# feel_names(10, 'task02.txt')
 
 '''Задание №3
 Напишите функцию, которая открывает на чтение созданные в прошлых задачах файлы 
@@ -60,12 +61,13 @@ def _read_or_begin(fd) -> str:
         
 
 def join_2files():
-    with (open('task01.txt', 'r', encoding='utf-8') as f_n, 
-          open('task02.txt', 'r', encoding='utf-8') as f_w,
-          open('task03.txt', 'w', encoding='utf-8') as f_r):
-        line_in_file_num = sum(1 for _ in f_n) # определяем количество строк в файле
-        line_in_file_words = sum(1 for _ in f_w)
-        for _ in range(max(line_in_file_num, line_in_file_words)):
+    with (open('seminar07_files/task01.txt', 'r', encoding='utf-8') as f_n, 
+          open('seminar07_files/task02.txt', 'r', encoding='utf-8') as f_w,
+          open('seminar07_files/task03.txt', 'w', encoding='utf-8') as f_r):
+        lines_file1 = sum(1 for _ in f_n) # определяем количество строк в файле
+        lines_file2 = sum(1 for _ in f_w)
+        
+        for _ in range(max(lines_file1, lines_file2)): # 
             num = _read_or_begin(f_n)
             word = _read_or_begin(f_w)
             num_a, num_b = num.split('|')
@@ -75,7 +77,7 @@ def join_2files():
             elif mult > 0:
                 f_r.write(f'{word.upper()} {round(mult)}\n')
 
-# join_2files()
+join_2files()
 
 '''Задание №4
 ✔ Создайте функцию, которая создаёт файлы с указанным расширением.
@@ -92,7 +94,7 @@ def create_files(extension: str, min_len: int = 6, max_len: int = 30,
                 min_bytes: int = 256, max_bytes: int = 4096, quantity_files: int = 42):
     '''Cоздаёт файлы с указанным расширением'''
     for _ in range(quantity_files):
-      rad_string = "".join(choice(VOWES) if i % 3 == 0 else choice(CONSTANATS) 
+      rad_string = "".join(choice(VOWELS) if i % 3 == 0 else choice(CONSONANTS) 
                                     for i in range(randint(min_len, max_len)))
       data = bytes(randint(0, 255) for _ in range(randint(min_bytes, max_bytes)))
       with open(f'{rad_string}.{extension}','wb') as f:
