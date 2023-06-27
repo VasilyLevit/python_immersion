@@ -1,4 +1,7 @@
-# Создайте декоратор с параметром. Параметр - целое число, количество запусков декорируемой функции.
+''' Задание 4
+Создайте декоратор с параметром. Параметр - целое число, количество запусков 
+декорируемой функции.'''
+
 from typing import Callable
 
 
@@ -7,7 +10,7 @@ def counter(param: int):
         my_list = []
 
         def wrapper(*args, **kwargs):
-            for i in range(param):
+            for _ in range(param):
                 result = func(*args, **kwargs)
                 my_list.append(result)
             return my_list
@@ -27,3 +30,4 @@ def fact(num: int) -> int:
 
 if __name__ == '__main__':
     print(fact(4))
+  
