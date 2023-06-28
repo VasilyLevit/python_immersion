@@ -1,17 +1,16 @@
-# Создайте класс окружность.
-# Класс должен принимать радиус окружности при создании
-# экземпляра.
-# У класса должно быть два метода, возвращающие длину
-# окружности и её площадь.
+''' Задача 1
+Создайте класс окружность.
+Класс должен принимать радиус окружности при создании экземпляра.
+У класса должно быть два метода, возвращающие длину окружности и её площадь.'''
 
 from math import pi
 
 
 class Circle:
-    def __init__(self, r):
-        self.r = r
+    def __init__(self, radius):
+        self.r = radius
 
-    def long(self):
+    def lenght(self):
         return 2 * pi * self.r
 
     def area(self):
@@ -20,4 +19,4 @@ class Circle:
 
 if __name__ == '__main__':
     circle = Circle(5)
-    print(f'{circle.long()= } {circle.area()= }')
+    print(f'{circle.lenght()= } {circle.area()= }')
