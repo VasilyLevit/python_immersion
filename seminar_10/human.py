@@ -9,24 +9,26 @@ full_name для вывода полного ФИО и т.п. на ваш выб
 
 class Human:
 
-    def __init__(self, firstname: str, lastname: str, age: int, gender: str):
+    def __init__(self, firstname: str, lastname: str, age: int, sex: str):
         self.firstname = firstname
         self.lastname = lastname
-        self.__age = age
-        self.gender = gender
+        self.__age = age # __защищаем свойство ворзрас для прямого изменения
+        self.sex = sex
+
 
     def get_age(self):
+        '''Получения позраста'''
         return self.__age
 
+
     def birthday(self):
+        '''Увеличение возраста на 1 год'''
         self.__age += 1
 
+
     def __str__(self):
-        return f'{self.firstname} {self.lastname} {self.get_age()} {self.gender}'
-
-
-
-
+        '''Строчное представление вывода информации'''
+        return f'{self.firstname} {self.lastname} {self.get_age()} {self.sex}'
 
 
 if __name__ == '__main__':
