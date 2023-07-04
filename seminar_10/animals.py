@@ -10,6 +10,7 @@
 Остальные классы наследуйте от него.
 Убедитесь, что в созданные ранее классы внесены правки.'''
 
+
 class Animal:
     def __init__(self, name: str, weight: int, age: int):
         self.name = name
@@ -75,7 +76,7 @@ class Fish(Animal):
 if __name__ == '__main__':
     dog = Dog("Рэкс", 40, 5, "Такса")
     bird = Bird("Гоша", 1, 3, "Попугай", "Чирик")
-    fish = Fish("Карп", 10, 5, "Речной")
+    fish = Fish("Дорри", 10, 5, "Речной")
 
     print(dog)
     print(bird)

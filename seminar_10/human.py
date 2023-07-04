@@ -8,7 +8,7 @@ full_name для вывода полного ФИО и т.п. на ваш выб
 
 
 class Human:
-
+    "Класс для хранения инофрмации о человеке"
     def __init__(self, firstname: str, lastname: str, age: int, sex: str):
         self.firstname = firstname
         self.lastname = lastname
@@ -17,12 +17,12 @@ class Human:
 
 
     def get_age(self):
-        '''Получения позраста'''
+        '''Метод получения позраста'''
         return self.__age
 
 
-    def birthday(self):
-        '''Увеличение возраста на 1 год'''
+    def increase_age(self):
+        '''Метод увеличения возраста на 1 год'''
         self.__age += 1
 
 
@@ -33,10 +33,10 @@ class Human:
 
 if __name__ == '__main__':
     h_1 = Human('Иван', 'Иванов', 23, 'мужской')
-    h_2 = Human('Петр', 'Сидоров', 40, 'мужской')
+    h_2 = Human('Петр', 'Сидоров', 40, 'мужской') 
     print(h_1)
     print(h_2)
-    h_1.birthday()
-    h_2.birthday()
+    h_1.increase_age()
+    h_2.increase_age()
     print(h_1)
     print(h_2)

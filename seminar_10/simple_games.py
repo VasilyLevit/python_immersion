@@ -26,8 +26,7 @@ class Games:
         return random_numbers
 
     def counter(param: int):
-        '''
-        Декоратор, который вызывает метод заданное число раз
+        ''' Декоратор, вызывает метод заданное число раз
         :return:
         '''
 
@@ -46,8 +45,7 @@ class Games:
 
     @counter(_COUNT_REPEAT)
     def fact(self, num: int) -> int:
-        '''
-        Метод нахождения факториала
+        ''' Метод нахождения факториала
         :param num:
         :return:
         '''
@@ -57,8 +55,7 @@ class Games:
         return res
 
     def deco_json(func: Callable):
-        '''
-        Декоратор, который записывает метод в json
+        ''' Декоратор, который записывает метод в json
         :return:
         '''
         FILE_NAME = 'multy.json'

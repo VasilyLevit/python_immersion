@@ -7,16 +7,17 @@ from math import pi
 
 
 class Circle:
+    "Класс для получения длины окружности и площади окружности"
     def __init__(self, radius):
-        self.r = radius
+        self.r = radius # r - атрибут экземпляра класса
 
-    def lenght(self):
+    def get_lenght(self):
         return 2 * pi * self.r
 
-    def area(self):
+    def get_area(self):
         return pi * pow(self.r, 2)
 
 
 if __name__ == '__main__':
-    circle = Circle(5)
+    circle = Circle(5) # Создание экземляра класса cirlcle с передачей аргумента
     print(f'{circle.lenght()= } {circle.area()= }')

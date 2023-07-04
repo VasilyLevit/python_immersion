@@ -6,14 +6,15 @@
 квадрат.'''
 
 class Rectangle:
+    "Клас для получения периметра и площади прямоугольника"
     def __init__(self, a: int, b: int = None):
         self.a = a
         self.b = b if b is not None else a
 
-    def perimeter(self):
+    def get_perimeter(self):
         return 2 * (self.a + self.b)
 
-    def area(self):
+    def get_area(self):
         return self.a * self.b
 
 
