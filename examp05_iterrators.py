@@ -1,4 +1,4 @@
-# Однострочные функции
+'''*** Однострочные функции ***'''
 
 '''Обмен значениями переменных (без создания временных переменных)'''
 # a, b = 2, 3
@@ -26,12 +26,37 @@
 # *a, b, c, d = data 
 # print(f'{a=} {b=} {c=} {d=}')
 
+'''***** Итераторы *****'''
+'''iter(object[, sentinel])
+: object: является обязательным аргументом
+: sentinel: Параметр указывает в какой момент должна быть завершена итерация, при совпадении возвращаемого значения со значением sentinel.'''
+data = [2, 4, 6, 8] 
+# Получим итератор списка data
+list_iter = iter(data) 
+# Напрямую извлечь даннные из итератора не получится
+print(list_iter) # <list_iterator object at 0x10d56acb0> объект итератор списка
+# простейший способ получить элементы
+print(*list_iter)
+# второй раз получить список не получится, итератор одноразовый объект
+# для повтора нужно будет создать повторно итератор
+print(*list_iter)
+''' next(iterator[, default])
+: iterator: итератор, который вернула функция iter
+: default: возврата значения по умолчанию вместо выброса исключения StopIteration'''
+list_iter = iter(data)
+print(next(list_iter)) 
+print(next(list_iter)) 
+print(next(list_iter)) 
+print(next(list_iter)) 
+print(next(list_iter)) # StopIteration исключение служит указанием циклу for in о завершении работы
+
+
 # ***** Генераторы *****
 '''Генераторные выражения'''
-x = [1, 1, 2, 3, 5, 8, 13]
-y = [1, 2, 6, 24, 120, 720]
-print(f'{len(x)=}\t{len(y)=}')
-mult = (i + j for i in x if i % 2 != 0 for j in y if j != 1) 
-print(mult, type(mult))
-res = list(mult)
-print(f'{len(res)=}\n{res}')
+# x = [1, 1, 2, 3, 5, 8, 13]
+# y = [1, 2, 6, 24, 120, 720]
+# print(f'{len(x)=}\t{len(y)=}')
+# mult = (i + j for i in x if i % 2 != 0 for j in y if j != 1) 
+# print(mult, type(mult))
+# res = list(mult)
+# print(f'{len(res)=}\n{res}')
