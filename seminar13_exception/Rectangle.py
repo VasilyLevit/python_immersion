@@ -1,13 +1,10 @@
-''' Задача 4
-Доработайте класс прямоугольник из прошлых семинаров.
-Добавьте возможность изменять длину и ширину прямоугольника и встройте контроль 
-недопустимых значений (отрицательных).
-Используйте декораторы свойств.'''
+''' Домашнее задание (к задаче прямоугольник из 12 семинара)
+Написать классы исключения с выводом подробной информации.
+Поднимайте исключения внутри основного кода. Например
+нельзя создавать прямоугольник со сторонами
+отрицательной длины.'''
 
-''' Задача 5
-Доработаем прямоугольник и добавим экономию памяти для хранения свойств 
-экземпляра без словаря __dict__'''
-
+from custom_errors import SideError
 
 class Rectangle:
     '''Класс прямоугольник.'''
@@ -34,14 +31,14 @@ class Rectangle:
         if value > 0: # контроль недопустимых значений (отрицательных)
             self._a = value
         else:
-            raise ValueError(value)
+            raise SideError(value)
 
     @b.setter
     def b(self, value):
         if value > 0:
             self._b = value
         else:
-            raise ValueError(value)
+            raise SideError(value)
 
     def perimeter(self):
         '''Метод расчета периметра прямоугольника.'''
@@ -73,18 +70,17 @@ class Rectangle:
 if __name__ == '__main__':
     rect_1 = Rectangle(2, 5)
     # rect_2 = Rectangle(5, 10)
-    print(rect_1.a)
+    # print(rect_1.a)
+    # print(rect_1.b)
+    
+    rect_1.a = -1 # пытаемся передать отрицательное значение    
+    print(rect_1)
+    # print(rect_2)
+    # # print(f'{rect.perimeter()= } {rect.area()= }')
+    # # print(f'{rect_1.perimeter()= } {rect_1.area()= }')
+    # res_sum = rect_1 + rect_2
+    # print(res_sum.a, res_sum.b)
+    # res_sub = rect_1 - rect_2
+    # print(res_sub.a, res_sub.b)
 
-print(rect_1.b)
-# rect_1.a = -1
-# rect_1.a = -10
-print(rect_1)
-# print(rect_2)
-# # print(f'{rect.perimeter()= } {rect.area()= }')
-# # print(f'{rect_1.perimeter()= } {rect_1.area()= }')
-# res_sum = rect_1 + rect_2
-# print(res_sum.a, res_sum.b)
-# res_sub = rect_1 - rect_2
-# print(res_sub.a, res_sub.b)
-
-rect_1.__dict__ # получим ошибку, поскольку экземпрляр хранит только атрибуты перечисленные в __slots__ 
+    # rect_1.__dict__ # получим ошибку, поскольку экземпрляр хранит только атрибуты перечисленные в __slots__ 
