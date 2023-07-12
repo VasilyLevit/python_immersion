@@ -1,26 +1,23 @@
-# Напишите для задачи 1 тесты unittest. Проверьте
-# следующие варианты:
-# возврат строки без изменений
-# возврат строки с преобразованием регистра без потери
-# символов
-# возврат строки с удалением знаков пунктуации
-# возврат строки с удалением букв других алфавитов
-# возврат строки с учётом всех вышеперечисленных пунктов
-# (кроме п. 1)
+''' Задание 3
+Напишите для задачи 1 тесты unittest. Проверьте следующие варианты:
+- возврат строки без изменений
+- возврат строки с преобразованием регистра без потери символов
+- возврат строки с удалением знаков пунктуации
+- возврат строки с удалением букв других алфавитов
+- возврат строки с учётом всех вышеперечисленных пунктов (кроме п. 1)'''
 
 
 import string
-import doctest
 import unittest
 
 
 def remove_chars(text: str) -> str:
-    alpha = string.ascii_letters + ' '
-    result = text
-    for t in text:
-        if t not in alpha:
-            result = result.replace(t, '')
-    return result.lower()
+    abc = string.ascii_letters + ' '
+    out_text = ''
+    for char in text:
+        if char in abc:
+           out_text += ''.join(char)        
+    return out_text.lower()
 
 
 class TestRemoveChars(unittest.TestCase):
